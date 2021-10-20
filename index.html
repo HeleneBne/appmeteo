@@ -1,42 +1,10 @@
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>AJAX JSON</title>
-<style>
-#contenant {
-
-    display: flex;
-    flex-wrap: wrap;
-	
-}
-
-#contenant div {
-    width: 23%;
-    border: solid 1px red;
-}
-
-#contenu {
-	/* display: flex;
-	flex-direction: row;
-	flex-wrap: wrap; */
-margin-top: 50px;
-background: white;
-}
-
-img {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-}
-#auj div{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    border: none;
-}
-
-</style>
 </head>
 
 <body>
@@ -47,12 +15,16 @@ img {
     <h1>Intro json</h1>
 
     <div id="contenant">
-        <div id="auj">
+        <div id="auj" >
         <h2>Conditions actuelles maintenant</h2>
         <p id="condition"></p>
-        <img src="" alt="">
+        <img id="helene" src="" alt="">
         <div>
-        <p id="temp"></p>
+            <div>
+                
+            <p id="temp"></p>
+            </div>
+            <hr>
         <p id="humidite"></p>
         </div>
     </div>
@@ -71,8 +43,9 @@ img {
 
     </div>
 
-<script src="jquery-3.6.0.min.js"></script>	
-<script src="scripts.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>	
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/scripts.js"></script>
 
 </body>
 </html>

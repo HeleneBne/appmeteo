@@ -1,3 +1,37 @@
-body{
-    background-color: beige;
+.eclaircies{
+    background-color: hotpink;
+}
+.ensoleille{
+    background-color: lawngreen;
+}
+#contenant {
+
+    display: flex;
+    flex-wrap: wrap;
+	
+}
+
+#contenant div {
+    width: 23%;
+    border: solid 1px greenyellow;
+}
+
+#contenu {
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; */
+margin-top: 50px;
+background: white;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+#auj div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border: none;
 }
