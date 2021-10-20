@@ -41,7 +41,7 @@ $(document).ready(function(){
                      $('#aujx').removeClass().addClass(today);
                      console.log(today);
                  } else {
-                     $('#helene').attr("src","img/nuageux.png");
+                     $('#helene').attr("src",monObjet.current_condition.icon);
                      $('#aujx').removeClass().addClass("ensoleille");
                  }
 
@@ -69,7 +69,7 @@ $(document).ready(function(){
                  monObjet.fcst_day_1.condition_key=="faibles-passages-nuageux") {
                      $('#dem img').attr("src","img/"+monObjet.fcst_day_1.condition_key+".png");
                  } else {
-                     $('#dem img').attr("src","img/nuageux.png");
+                     $('#dem img').attr("src",monObjet.fcst_day_1.icon);
                  }
 
 
@@ -89,7 +89,7 @@ $(document).ready(function(){
                  monObjet.fcst_day_2.condition_key=="faibles-passages-nuageux") {
                      $('#ad img').attr("src","img/"+monObjet.fcst_day_2.condition_key+".png");
                  } else {
-                     $('#ad img').attr("src","img/nuageux.png");
+                     $('#ad img').attr("src",monObjet.fcst_day_2.icon);
                  }
 
 
@@ -111,7 +111,7 @@ $(document).ready(function(){
                  monObjet.fcst_day_3.condition_key=="faibles-passages-nuageux") {
                      $('#aad img').attr("src","img/"+monObjet.fcst_day_3.condition_key+".png");
                  } else {
-                     $('#aad img').attr("src","img/nuageux.png");
+                     $('#aad img').attr("src",monObjet.fcst_day_3.icon);
                  }
 
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
                  monObjet.fcst_day_4.condition_key=="faibles-passages-nuageux") {
                      $('#last img').attr("src","img/"+monObjet.fcst_day_4.condition_key+".png");
                  } else {
-                     $('#last img').attr("src","img/nuageux.png");
+                     $('#last img').attr("src",monObjet.fcst_day_4.icon);
                  }
 
 
