@@ -2,6 +2,9 @@ $(document).ready(function(){
     
 	$( "#go" ).click(function() {
         var ville = $('#ville').val();
+        if (ville=="bruxelles") {
+            ville="bruxelles-1";
+        }
         thomas(ville);
         console.log(ville)
         });
