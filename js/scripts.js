@@ -8,7 +8,6 @@ $(document).ready(function(){
 		  success:function(monObjet) {
 				 console.log(monObjet);
 
-<<<<<<< HEAD
                 
 
                 //  AUJOURD'HUI
@@ -65,21 +64,6 @@ $(document).ready(function(){
                  } else {
                      $('#ad img').attr("src","img/nuageux.png");
                  }
-=======
-            $('#auj').addClass(monObjet.current_condition.condition_key);
-			$('#condition').text(monObjet.current_condition.condition);
-            $('#helene').attr("src","img/"+monObjet.current_condition.condition_key+".png");
-            $('#temp').text(monObjet.current_condition.tmp);
-            $('#humidite').text("humidité_img: "+monObjet.current_condition.humidity);
-            
-
-			$('#dem p').text(monObjet.fcst_day_1.condition);
-            $('#dem img').attr("src", monObjet.fcst_day_1.icon);
-
-
-			$('#ad p').text(monObjet.fcst_day_2.condition);
-            $('#ad img').attr("src", monObjet.fcst_day_2.icon);
->>>>>>> 4a64b020971c0df4151b306c3096c85e9a8f1236
 
 
                  $('#ad_cond').text(monObjet.fcst_day_2.condition);
