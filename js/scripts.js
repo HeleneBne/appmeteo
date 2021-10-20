@@ -5,12 +5,12 @@ $(document).ready(function(){
         if (ville=="bruxelles") {
             ville="bruxelles-1";
         }
-        thomas(ville);
+        etc(ville);
         console.log(ville)
         });
        
        
-        function thomas(ville) {
+        function etc(ville) {
        
          
 
@@ -141,6 +141,6 @@ $(document).ready(function(){
         
 }
        
-thomas("Bruxelles-1");
+etc("Bruxelles-1");
 
   });  // ready			   
