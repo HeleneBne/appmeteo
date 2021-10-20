@@ -10,6 +10,9 @@ $(document).ready(function(){
         etc(ville);
         console.log(ville)
         });
+        $("#ville").focus(function () {
+            $(this).val("")
+        });
        
        
         function etc(ville) {
