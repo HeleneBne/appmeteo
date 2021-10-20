@@ -133,7 +133,6 @@ $(document).ready(function(){
 			
                     console.log(monObjet);
 
-<<<<<<< HEAD
                 //  AUJOURD'HUI
                 if (monObjet.current_condition.condition_key=="ensoleille"|| monObjet.current_condition.condition_key=="eclaircies"||monObjet.current_condition.condition_key=="averses-de-pluie-faible"||
                 monObjet.current_condition.condition_key=="pluie-forte"|| monObjet.current_condition.condition_key=="neige-moderee"||
@@ -238,21 +237,6 @@ $(document).ready(function(){
                 $('#last_date').text(monObjet.fcst_day_4.day_long);
                 $('#last_tmax').text(monObjet.fcst_day_4.tmax);
                 $('#last_tmin').text(monObjet.fcst_day_4.tmin);        
-=======
-                    $('#auj').addClass(monObjet.current_condition.condition_key);
-                    $('#condition').text(monObjet.current_condition.condition);
-                    $('#helene').attr("src", "img/"+monObjet.current_condition.condition_key+".png");
-                    $('#temp').text("température_img: "+monObjet.current_condition.tmp);
-                    $('#humidite').text("humidité_img: "+monObjet.current_condition.humidity);
-
-                    $('#dem p').text(monObjet.fcst_day_1.condition);
-                    $('#dem img').attr("src", monObjet.fcst_day_1.icon);
-
-                    $('#ad p').text(monObjet.fcst_day_2.condition);
-                    $('#ad img').attr("src", monObjet.fcst_day_2.icon);
-   
-                     
->>>>>>> 4a64b020971c0df4151b306c3096c85e9a8f1236
    
                 
              } // success function
