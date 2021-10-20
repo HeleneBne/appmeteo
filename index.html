@@ -1,78 +1,159 @@
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 <meta charset="UTF-8">
-<title>AJAX JSON</title>
-<style>
-#contenant {
-
-    display: flex;
-    flex-wrap: wrap;
-	
-}
-
-#contenant div {
-    width: 23%;
-    border: solid 1px greenyellow;
-}
-
-#contenu {
-	/* display: flex;
-	flex-direction: row;
-	flex-wrap: wrap; */
-margin-top: 50px;
-background: white;
-}
-
-img {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-}
-#auj div{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    border: none;
-}
-
-</style>
+<title>meteo</title>
 </head>
 
-<body>
+<body id="aujx">
 
-    <input type="text" id="ville">
-    <input type="submit" id="go" value="GO">
+   
 
-    <h1>Intro json</h1>
+    <div class="container-fluid contenant">
+<div class="row">
+    <div class="col-12 col-lg-7">
+        <div class="auj">
+            
+            <div id="header">
 
-    <div id="contenant">
-        <div id="auj">
-        <h2>Conditions actuelles maintenant</h2>
-        <p id="condition"></p>
-        <img src="" alt="">
-        <div>
-        <p id="temp"></p>
-        <p id="humidite"></p>
+                 <div id="jr">
+                    <p id="jour"></p>
+                    <p id="date"></p>
+                </div>
+               
+                <div id="bouton">
+                        <input placeholder="Ville" type="text" id="ville">
+                    <button type="submit" id="go" class="btn btn-light">GO</button>
+                </div>
+            </div>
+            <div id="tmp">
+                    <p id="temp"></p>
+                    <p id="condition"></p>
+                </div>
+            
+            
+            <img id="helene" src="" alt="">
+            
+            <p id="nomVille"></p>
+            
+            <div class="container-fluid">
+                <div class="row image">
+                    <div class=" col-4 d-flex justify-content-end" >
+                        <img src="img/humidite.png" alt="">
+                        <p id="humidite"></p>
+                    </div>
+                    <div class=" col-4 d-flex justify-content-center">
+                        <img src="img/vents.png" alt="">
+                        <p id="vent"></p>
+                    </div>
+                    <div class=" col-4 d-flex justify-content-start">
+                        <img src="img/eclaire.png" alt="">
+                        <p id="pression"></p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+
+        </div> <!--/auj  -->
+    </div><!--/col-6  -->
+    
+    <div class="col-12 col-lg-5 autresjours">
+        <div id="dem">
+            <div>
+                <p id="dem_cond"></p>
+                <div class="d-flex espace">
+                    <p id="dem_date"></p>
+                    <p id="dem_jour"></p>
+                </div>
+                <div class="d-flex espace">
+                    <p id="dem_tmax"></p>
+                    <p id="dem_tmin"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div><!--/dem  -->
+        <div id="ad">
+            <div>
+                <p id="ad_cond"></p>
+                <div class="d-flex espace">
+                    <p id="ad_date"></p>
+                    <p id="ad_jour"></p>
+                </div>
+                <div class="d-flex espace">
+                    <p id="ad_tmax"></p>
+                    <p id="ad_tmin"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div><!--/ad  -->
+        
+        <div id="aad">
+            <div>
+                <p id="aad_cond"></p>
+                <div class="d-flex espace">
+                    <p id="aad_date"></p>
+                    <p id="aad_jour"></p>
+                </div>
+                <div class="d-flex espace">
+                    <p id="aad_tmax"></p>
+                    <p id="aad_tmin"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div><!--/aad  -->
+
+        <div id="last">
+            <div>
+                <p id="last_cond"></p>
+                <div class="d-flex espace">
+                    <p id="last_date"></p>
+                    <p id="last_jour"></p>
+                </div>
+                <div class="d-flex espace">
+                    <p id="last_tmax"></p>
+                    <p id="last_tmin"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div><!--/last  -->
+    </div><!--/col-6  -->
+    
+</div><!--/row  -->
+        
+
+            
+
+            </div>
         </div>
-    </div>
 
-    <div id="dem">
-        <h2>Conditions demain</h2>
-        <p></p>
-        <img src="" alt="">
-    </div>
-
-    <div id="ad">
-        <h2>Conditions après demain</h2>
-        <p></p>
-        <img src="" alt="">
     </div>
 
     </div>
 
-<script src="jquery-3.6.0.min.js"></script>	
-<script src="scripts.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>	
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/scripts.js"></script>
 
 </body>
 </html>
