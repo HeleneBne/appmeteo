@@ -132,7 +132,7 @@ input {
   margin: 0 10px;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 520px) {
   #jour {
     font-size: 28px;
   }
