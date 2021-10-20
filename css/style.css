@@ -122,7 +122,7 @@ input {
   height: 100px;
 }
 
-#dem_cond, #ad_cond, #add_cond, #last_cond {
+#dem_cond, #ad_cond, #aad_cond, #last_cond {
   text-transform: uppercase;
   font-weight: 30px;
   font-weight: bolder;
