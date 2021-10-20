@@ -4,25 +4,18 @@ $(document).ready(function(){
     
 	$( "#go" ).click(function() {
         var ville = $('#ville').val();
-        if (ville=="bruxelles") {
-            ville="bruxelles-1";
-        }
+        
         etc(ville);
         console.log(ville)
-        });
-        $("#ville").focus(function () {
-            $(this).val("")
         });
        
        
         function etc(ville) {
-       
-         
-
-         
- 
-       
-       
+            
+            $('#nomVille').text(ville.replace("-1", ""));
+            if (ville=="bruxelles") {
+                     ville="bruxelles-1";
+                }
 	    $.ajax( {
 
 		  url:'https://www.prevision-meteo.ch/services/json/'+ville,				 
