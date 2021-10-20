@@ -10,12 +10,14 @@ $(document).ready(function(){
         function thomas(ville) {
        
          
+
          
+ 
        
        
 	    $.ajax( {
 
-		  url:'https://www.prevision-meteo.ch/services/json/nice',				 
+		  url:'https://www.prevision-meteo.ch/services/json/'+ville,				 
 		  
 		  success:function(monObjet) {
 				 console.log(monObjet);
