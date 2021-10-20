@@ -8,7 +8,10 @@ $(document).ready(function(){
         etc(ville);
         console.log(ville)
         });
-       
+
+       $( "#ville" ).focus(function(){
+            $(this).val("");
+       });
        
         function etc(ville) {
             
@@ -47,7 +50,6 @@ $(document).ready(function(){
                  $('#condition').text(monObjet.current_condition.condition);
      
                  $('#temp').text(monObjet.current_condition.tmp+"°C");
-                 $('#nomVille').text( $('#ville').val());
                  $('#date').text(monObjet.current_condition.date);
                  $('#jour').text(monObjet.fcst_day_0.day_long);
                  $('#humidite').text(monObjet.current_condition.humidity);
