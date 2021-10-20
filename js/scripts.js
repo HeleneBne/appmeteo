@@ -15,11 +15,11 @@ $(document).ready(function(){
             $('#temp').text(monObjet.current_condition.tmp);
             $('#humidite').text("humidité_img: "+monObjet.current_condition.humidity);
             
-            $('#dem').addClass(monObjet.fcst_day_1.condition_key);
+
 			$('#dem p').text(monObjet.fcst_day_1.condition);
             $('#dem img').attr("src", monObjet.fcst_day_1.icon);
 
-            $('#ad').addClass(monObjet.fcst_day_2.condition_key);
+
 			$('#ad p').text(monObjet.fcst_day_2.condition);
             $('#ad img').attr("src", monObjet.fcst_day_2.icon);
 
