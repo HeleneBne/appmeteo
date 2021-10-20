@@ -4,22 +4,18 @@ $(document).ready(function(){
     
 	$( "#go" ).click(function() {
         var ville = $('#ville').val();
-        if (ville=="bruxelles") {
-            ville="bruxelles-1";
-        }
+        
         etc(ville);
         console.log(ville)
         });
        
        
         function etc(ville) {
-       
-         
-
-         
- 
-       
-       
+            
+            $('#nomVille').text(ville.replace("-1", ""));
+            if (ville=="bruxelles") {
+                     ville="bruxelles-1";
+                }
 	    $.ajax( {
 
 		  url:'https://www.prevision-meteo.ch/services/json/'+ville,				 
@@ -53,7 +49,6 @@ $(document).ready(function(){
                  $('#condition').text(monObjet.current_condition.condition);
      
                  $('#temp').text(monObjet.current_condition.tmp+"°C");
-                 $('#nomVille').text( $('#ville').val());
                  $('#date').text(monObjet.current_condition.date);
                  $('#jour').text(monObjet.fcst_day_0.day_long);
                  $('#humidite').text(monObjet.current_condition.humidity);
