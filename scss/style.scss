@@ -112,6 +112,32 @@ text-transform: uppercase;
 .espace p{
     margin: 0 10px;
 }
+
+.SO{
+    transform: rotate(125deg);
+}
+.S{
+    transform: rotate(90deg);
+}
+.SE{
+    transform: rotate(45deg);
+}
+.E{
+    transform: rotate(0deg);
+}
+.NE{
+    transform: rotate(-45deg);
+}
+.N{
+    transform: rotate(-90deg);
+}
+.NO{
+    transform: rotate(-125deg);
+}
+.O{
+    transform: rotate(180deg);
+}
+
 @media screen and (max-width: 520px) {
     #jour{
         font-size: 28px;
