@@ -33,7 +33,8 @@ $(document).ready(function(){
                  if (today=="ensoleille"|| 
                  today=="eclaircies"||
                  today=="averses-de-pluie-faible"||
-                 today=="pluie-forte"|| today=="neige-moderee"||
+                 today=="pluie-forte"||
+                 today=="neige-moderee"||
                  today=="brouillard"||
                  today=="faibles-passages-nuageux") {
                      $('#helene').attr("src","img/"+today+".png");
@@ -49,7 +50,8 @@ $(document).ready(function(){
 
                  $('#condition').text(monObjet.current_condition.condition);
      
-                 $('#temp').text(monObjet.current_condition.tmp);
+                 $('#temp').text(monObjet.current_condition.tmp+"°C");
+                 $('#nomVille').text( $('#ville').val());
                  $('#date').text(monObjet.current_condition.date);
                  $('#jour').text(monObjet.fcst_day_0.day_long);
                  $('#humidite').text(monObjet.current_condition.humidity);
@@ -74,8 +76,8 @@ $(document).ready(function(){
                  $('#dem_cond').text(monObjet.fcst_day_1.condition);
                  $('#dem_jour').text(monObjet.fcst_day_1.date);
                  $('#dem_date').text(monObjet.fcst_day_1.day_long);
-                 $('#dem_tmax').text(monObjet.fcst_day_1.tmax);
-                 $('#dem_tmin').text(monObjet.fcst_day_1.tmin);
+                 $('#dem_tmax').text("T° max: "+monObjet.fcst_day_1.tmax+"°C ");
+                 $('#dem_tmin').text("T° min: "+monObjet.fcst_day_1.tmin+"°C ");
 
 
                 //  APRES-DEMAIN
@@ -94,8 +96,8 @@ $(document).ready(function(){
                  $('#ad_cond').text(monObjet.fcst_day_2.condition);
                  $('#ad_jour').text(monObjet.fcst_day_2.date);
                  $('#ad_date').text(monObjet.fcst_day_2.day_long);
-                 $('#ad_tmax').text(monObjet.fcst_day_2.tmax);
-                 $('#ad_tmin').text(monObjet.fcst_day_2.tmin);
+                 $('#ad_tmax').text("T° max: "+monObjet.fcst_day_2.tmax+"°C ");
+                 $('#ad_tmin').text("T° min: "+monObjet.fcst_day_2.tmin+"°C ");
      
 
 
@@ -116,8 +118,8 @@ $(document).ready(function(){
                  $('#aad_cond').text(monObjet.fcst_day_3.condition);
                  $('#aad_jour').text(monObjet.fcst_day_3.date);
                  $('#aad_date').text(monObjet.fcst_day_3.day_long);
-                 $('#aad_tmax').text(monObjet.fcst_day_3.tmax);
-                 $('#aad_tmin').text(monObjet.fcst_day_3.tmin);
+                 $('#aad_tmax').text("T° max: "+monObjet.fcst_day_3.tmax+"°C");
+                 $('#aad_tmin').text("T° min: "+monObjet.fcst_day_3.tmin+"°C");
                  
 
 
@@ -138,8 +140,8 @@ $(document).ready(function(){
                  $('#last_cond').text(monObjet.fcst_day_4.condition);
                  $('#last_jour').text(monObjet.fcst_day_4.date);
                  $('#last_date').text(monObjet.fcst_day_4.day_long);
-                 $('#last_tmax').text(monObjet.fcst_day_4.tmax);
-                 $('#last_tmin').text(monObjet.fcst_day_4.tmin);
+                 $('#last_tmax').text("T° max: "+monObjet.fcst_day_4.tmax+"°C ");
+                 $('#last_tmin').text("T° min: "+monObjet.fcst_day_4.tmin+"°C ");
      
 			 
 		  } // success function

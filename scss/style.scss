@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
 .ensoleille{
     background-color: #FFC8DD;
 }
@@ -16,5 +21,132 @@
 .neige-moderee,.pluie-forte{
     background-color: #023047;
 }
+#ville{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 5px;
+    height: 38px;
+    margin-right: 5px;
+}
+#bouton{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 18px;
+}
+input{
+    padding-left: 15px;
+    color: rgba(15, 14, 14, 0.301);
+    width: 70%;
+    
 
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+#temp{
+    font-size: 65px;
+}
+#tmp{
+    text-align: end;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 40px;
 
+}
+#jr{
+    margin-top: 35px;
+    line-height: 22px;
+    margin-left: 15px;
+
+}
+#jr,#tmp{
+    font-weight: 600;
+    font-size: 35px;
+}
+.auj img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 300px;
+}
+.image{
+    margin-top: 40px;
+}
+.image img{
+    width: auto;
+    height: 25px;
+    margin: 0 10px;
+}
+.image p{
+    margin: 0 ;
+}
+#nomVille{
+text-align: center;
+font-weight: 400;
+font-size: 35px;
+margin-top: 10px;
+text-transform: uppercase;
+}
+#dem, #ad, #aad, #last{
+    background-color: rgba(255, 255, 255, 0.301);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 23%;
+}
+.autresjours img{
+    width: auto;
+    height: 100px;
+}
+#dem_cond, #ad_cond, #add_cond, #last_cond{
+    text-transform: uppercase;
+    font-weight: 30px;
+    font-weight: bolder;
+}
+.espace p{
+    margin: 0 10px;
+}
+@media screen and (max-width: 430px) {
+    #jour{
+        font-size: 28px;
+    }
+    #temp{
+        font-size: 60px;
+    }
+    .row .image{
+        margin-bottom: 30px;
+    }
+    #nomVille{
+        margin-top: 20px;
+    }
+    #helene{
+        width: auto;
+    height: 230px;
+    }
+    #date{
+        font-size: 15px;
+    }
+    #condition{
+        font-size: 20px;
+    }
+    #jr{
+        line-height: 12px;
+    }
+    #tmp{
+        line-height: 28px;
+    }
+    .autresjours img {
+        width: auto;
+        height: 80px;
+    }
+    .d-flex {
+        flex-wrap: wrap;
+    }
+
+}
