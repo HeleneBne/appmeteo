@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	
 	$.ajax( {
 
@@ -10,14 +9,19 @@ $(document).ready(function(){
 			
 				 console.log(monObjet);
 
+            $('#auj').addClass(monObjet.current_condition.condition_key);
 			$('#condition').text(monObjet.current_condition.condition);
-            $('#auj img').attr("src", monObjet.current_condition.icon);
-            $('#temp').text("température_img: "+monObjet.current_condition.tmp);
+            $('#helene').attr("src","img/"+monObjet.current_condition.condition_key+".png");
+            $('#temp').text(monObjet.current_condition.tmp);
             $('#humidite').text("humidité_img: "+monObjet.current_condition.humidity);
-			$('#dem p').text(monObjet.fcst_day_0.condition);
-            $('#dem img').attr("src", monObjet.fcst_day_0.icon);
-			$('#ad p').text(monObjet.fcst_day_0.condition);
-            $('#ad img').attr("src", monObjet.fcst_day_1.icon);
+            
+            $('#dem').addClass(monObjet.fcst_day_1.condition_key);
+			$('#dem p').text(monObjet.fcst_day_1.condition);
+            $('#dem img').attr("src", monObjet.fcst_day_1.icon);
+
+            $('#ad').addClass(monObjet.fcst_day_2.condition_key);
+			$('#ad p').text(monObjet.fcst_day_2.condition);
+            $('#ad img').attr("src", monObjet.fcst_day_2.icon);
 
 				  
 
@@ -29,6 +33,7 @@ $(document).ready(function(){
         $('#go').on('click', function () {
 
             var autreville = $('#ville').val();
+            //supprimerl'ancienne valeur quand on change de ville pour la 3e fois
 
             $.ajax({
                 url: 'https://www.prevision-meteo.ch/services/json/'+autreville,
@@ -36,16 +41,20 @@ $(document).ready(function(){
                 success:function(monObjet) {
 			
                     console.log(monObjet);
-                    
+
+                    $('#auj').addClass(monObjet.current_condition.condition_key);
                     $('#condition').text(monObjet.current_condition.condition);
-                    $('#auj img').attr("src", monObjet.current_condition.icon);
+                    $('#helene').attr("src", "img/"+monObjet.current_condition.condition_key+".png");
                     $('#temp').text("température_img: "+monObjet.current_condition.tmp);
                     $('#humidite').text("humidité_img: "+monObjet.current_condition.humidity);
-                    $('#auj img').attr("src", monObjet.current_condition.icon);
-                    $('#dem p').text(monObjet.fcst_day_0.condition);
-                    $('#dem img').attr("src", monObjet.fcst_day_0.icon);
-                    $('#ad p').text(monObjet.fcst_day_0.condition);
-                    $('#ad img').attr("src", monObjet.fcst_day_1.icon);
+                    // $('#auj img').attr("src", monObjet.current_condition.icon);
+                    $('#dem').addClass(monObjet.fcst_day_1.condition_key);
+                    $('#dem p').text(monObjet.fcst_day_1.condition);
+                    $('#dem img').attr("src", monObjet.fcst_day_1.icon);
+
+                    $('#ad').addClass(monObjet.fcst_day_2.condition_key);
+                    $('#ad p').text(monObjet.fcst_day_2.condition);
+                    $('#ad img').attr("src", monObjet.fcst_day_2.icon);
    
                      
    
