@@ -24,6 +24,8 @@ $(document).ready(function(){
 
 		  url:'https://www.prevision-meteo.ch/services/json/'+ville,				 
 		  
+
+          
 		  success:function(monObjet) {
 				 console.log(monObjet);
 
@@ -56,6 +58,7 @@ $(document).ready(function(){
                  $('#jour').text(monObjet.fcst_day_0.day_long);
                  $('#humidite').text(monObjet.current_condition.humidity);
                  $('#vent').text(monObjet.current_condition.wnd_dir);
+                 $('#rose-vent').removeClass().addClass(monObjet.current_condition.wnd_dir);
                  $('#pression').text(monObjet.current_condition.pressure);
 
 
