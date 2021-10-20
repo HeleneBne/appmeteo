@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    etc("nice");
     
 	$( "#go" ).click(function() {
         var ville = $('#ville').val();
@@ -25,20 +27,26 @@ $(document).ready(function(){
 		  success:function(monObjet) {
 				 console.log(monObjet);
 
-                
+                var today=monObjet.current_condition.condition_key;
 
                 //  AUJOURD'HUI
-                 if (monObjet.current_condition.condition_key=="ensoleille"|| monObjet.current_condition.condition_key=="eclaircies"||monObjet.current_condition.condition_key=="averses-de-pluie-faible"||
-                 monObjet.current_condition.condition_key=="pluie-forte"|| monObjet.current_condition.condition_key=="neige-moderee"||
-                 monObjet.current_condition.condition_key=="brouillard"||
-                 monObjet.current_condition.condition_key=="faibles-passages-nuageux") {
-                     $('#helene').attr("src","img/"+monObjet.current_condition.condition_key+".png");
+                 if (today=="ensoleille"|| 
+                 today=="eclaircies"||
+                 today=="averses-de-pluie-faible"||
+                 today=="pluie-forte"|| today=="neige-moderee"||
+                 today=="brouillard"||
+                 today=="faibles-passages-nuageux") {
+                     $('#helene').attr("src","img/"+today+".png");
+                     $('#aujx').removeClass().addClass(today);
+                     console.log(today);
                  } else {
                      $('#helene').attr("src","img/nuageux.png");
+                     $('#aujx').removeClass().addClass("ensoleille");
                  }
 
+                 
 
-                 $('.auj').removeClass().addClass(monObjet.current_condition.condition_key);
+
                  $('#condition').text(monObjet.current_condition.condition);
      
                  $('#temp').text(monObjet.current_condition.tmp);
@@ -141,6 +149,6 @@ $(document).ready(function(){
         
 }
        
-etc("Bruxelles-1");
+
 
   });  // ready			   
